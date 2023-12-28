@@ -33,7 +33,7 @@ function PlaceItem({
     setShowConfirmModal(false);
     try {
       await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/api/places/${id}`,
+        `${process.env.REACT_APP_BACKEND_URL}api/places/${id}`,
         "DELETE",
         null,
         {
@@ -81,7 +81,10 @@ function PlaceItem({
         <Card className="place-item__content">
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
-            <img src={`${process.env.REACT_APP_BACKEND_URL}/${image}`} alt={title} />
+            <img
+              src={`${process.env.REACT_APP_BACKEND_URL}${image}`}
+              alt={title}
+            />
           </div>
           <div className="place-item__info">
             <h2>{title}</h2>

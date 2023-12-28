@@ -54,7 +54,7 @@ function NewPlace() {
 
     try {
       await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/api/places`,
+        `${process.env.REACT_APP_BACKEND_URL}api/places`,
         "POST",
         formData,
         {

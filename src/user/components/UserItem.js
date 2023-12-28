@@ -10,7 +10,7 @@ function UserItem({ id, image, placeCount, name }) {
         <Link to={`/${id}/places`}>
           <div className="user-item__image">
             <Avatar
-              image={`${process.env.REACT_APP_BACKEND_URL}/${image}`}
+              image={`${process.env.REACT_APP_BACKEND_URL}${image}`}
               alt={name}
             />
           </div>
